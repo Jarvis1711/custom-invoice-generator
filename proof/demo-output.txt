@@ -1,19 +1,19 @@
 GET /api/health
-{"status":"ok","app":"Custom Invoice Generator","domain":"Business & Commerce"}
+{"status":"ok"}
 
 GET /api/schema
-{"statuses":["draft", "quoted", "approved", "fulfilled"],"fields":[{"key":"client_name"},{"key":"estimated_value"},{"key":"delivery_notes"}]}
+{"domain":"FinTech","entity":"Financial Record","statuses":["captured", "reconciled", "audited", "reported"]}
 
-POST /api/records
+POST /api/items
 {
   "id": 1,
-  "title": "Demo Record",
-  "status": "quoted",
+  "title": "Phase3 Demo",
+  "status": "captured",
   "payload": {
-    "client_name": "Demo value",
-    "estimated_value": 12,
-    "delivery_notes": "seed note"
+    "account_ref": "sample",
+    "amount": 5,
+    "compliance_notes": "notes"
   },
-  "created_at": "2026-03-24T15:52:21.914530+00:00",
-  "updated_at": "2026-03-24T15:52:21.914530+00:00"
+  "created_at": "2026-03-24T16:15:11.121871+00:00",
+  "updated_at": "2026-03-24T16:15:11.121871+00:00"
 }
